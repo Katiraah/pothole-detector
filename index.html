@@ -18,7 +18,7 @@
   </style>
 </head>
 <body>
-  <h2>🕳️ Pothole Detector</h2>
+  <h2> Pothole Detector</h2>
   <video id="video" autoplay playsinline muted></video>
   <canvas id="canvas"></canvas>
   <div class="info" id="gps"> GPS: acquiring...</div>
@@ -43,7 +43,7 @@
       currentLon = pos.coords.longitude;
       const acc  = pos.coords.accuracy.toFixed(0);
       document.getElementById("gps").textContent =
-        `📍 ${currentLat.toFixed(6)}, ${currentLon.toFixed(6)}  (±${acc}m)`;
+        ` ${currentLat.toFixed(6)}, ${currentLon.toFixed(6)}  (±${acc}m)`;
     },
     err => {
       document.getElementById("gps").textContent = " GPS error: " + err.message;
