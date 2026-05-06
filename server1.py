@@ -267,7 +267,13 @@ def get_timeline():
         print(f"❌ Error in get_timeline: {e}")
         return jsonify({"success": False, "error": str(e)}), 500
 
+
+
 if __name__ == "__main__":
-    print("🚀 Starting Road Vision API Server...")
-    print("📊 Server running on http://localhost:5000")
-    app.run(debug=True, port=5000, threaded=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # Render gives you PORT
+    app.run(host="0.0.0.0", port=port)
+
+
+
+
